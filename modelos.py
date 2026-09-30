@@ -1,16 +1,3 @@
-"""
-modelos.py
-Clases del dominio para el sistema de inventario del laboratorio de electrónica.
-
-Jerarquía de clases (herencia):
-    Componente (clase base)
-        ├── ComponenteElectronico
-        ├── Herramienta
-        └── InstrumentoMedicion
-
-Cada subclase sobreescribe to_linea() y __str__() (polimorfismo) para
-serializarse y mostrarse de forma distinta según su naturaleza.
-"""
 
 from datetime import datetime
 
@@ -18,7 +5,7 @@ SEPARADOR = "|"  # separador de campos usado en el archivo .txt
 
 
 class Componente:
-    """Clase base para cualquier elemento del inventario."""
+ 
 
     TIPO = "COMPONENTE"
 
@@ -87,7 +74,7 @@ class Componente:
 
 
 class ComponenteElectronico(Componente):
-    """Ej: resistencias, capacitores, circuitos integrados, transistores."""
+ 
 
     TIPO = "ELECTRONICO"
 
@@ -112,7 +99,7 @@ class ComponenteElectronico(Componente):
 
 
 class Herramienta(Componente):
-    """Ej: destornilladores, cautines, pinzas, pistolas de aire caliente."""
+   
 
     TIPO = "HERRAMIENTA"
 
@@ -133,7 +120,7 @@ class Herramienta(Componente):
 
 
 class InstrumentoMedicion(Componente):
-    """Ej: multímetros, osciloscopios, fuentes de voltaje, generadores."""
+
 
     TIPO = "INSTRUMENTO"
 
