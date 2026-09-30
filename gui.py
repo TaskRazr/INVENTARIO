@@ -1,12 +1,3 @@
-"""
-gui.py
-Interfaz gráfica opcional (Tkinter, incluido en la librería estándar de Python,
-no requiere instalación adicional) para el sistema de inventario.
-
-Ejecutar con:
-    python gui.py
-"""
-
 import tkinter as tk
 from tkinter import ttk, messagebox
 
@@ -15,7 +6,7 @@ from modelos import ComponenteElectronico, Herramienta, InstrumentoMedicion
 
 
 class VentanaNuevoComponente(tk.Toplevel):
-    """Ventana emergente para registrar un nuevo elemento, según el tipo elegido."""
+
 
     def __init__(self, master, inventario, al_guardar):
         super().__init__(master)
