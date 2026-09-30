@@ -1,11 +1,7 @@
-"""
-inventario.py
-Clase Inventario: mantiene en memoria la colección de componentes y coordina
-las operaciones de negocio (agregar, eliminar, buscar, actualizar, reportar),
-delegando la persistencia en disco a GestorPersistencia (composición).
-"""
 
-from persistencia import GestorPersistencia
+
+from persistencia 
+import GestorPersistencia
 
 
 class Inventario:
@@ -13,7 +9,7 @@ class Inventario:
         self.persistencia = GestorPersistencia(ruta_archivo)
         self.componentes = self.persistencia.cargar_componentes()
 
-    # ---------- CRUD ----------
+ 
 
     def agregar_componente(self, componente):
         if self.buscar_por_id(componente.id_componente) is not None:
@@ -38,7 +34,7 @@ class Inventario:
         self.guardar()
         return True
 
-    # ---------- Búsquedas ----------
+
 
     def buscar_por_id(self, id_componente):
         for c in self.componentes:
@@ -57,12 +53,11 @@ class Inventario:
     def listar_todos(self):
         return list(self.componentes)
 
-    # ---------- Reportes ----------
 
     def reporte_bajo_stock(self, umbral=5):
         return [c for c in self.componentes if c.cantidad <= umbral]
 
-    # ---------- Persistencia ----------
+
 
     def guardar(self):
         self.persistencia.guardar_componentes(self.componentes)
