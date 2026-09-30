@@ -1,10 +1,4 @@
-"""
-persistencia.py
-Responsable exclusivamente de leer y escribir el inventario en un archivo .txt.
-Separar esta responsabilidad de Inventario sigue el principio de responsabilidad
-única (S de SOLID) y facilita cambiar el mecanismo de persistencia en el futuro
-(por ejemplo a JSON o a una base de datos) sin tocar la lógica de negocio.
-"""
+
 
 import os
 from modelos import Componente
