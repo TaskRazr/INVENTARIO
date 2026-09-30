@@ -1,11 +1,3 @@
-"""
-main.py
-Interfaz de consola (CLI) para el sistema de gestión de inventario del
-laboratorio de electrónica. Punto de entrada de la aplicación en modo texto.
-
-Ejecutar con:
-    python main.py
-"""
 
 from inventario import Inventario
 from modelos import ComponenteElectronico, Herramienta, InstrumentoMedicion
